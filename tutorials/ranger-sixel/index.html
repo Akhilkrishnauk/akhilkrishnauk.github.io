@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Monochrome's Monochromatic Website</title>
+	<!-- Metadata thingies -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="canonical" href="https://monochrome.codeberg.page" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+
+<body>
+	<div class="navbar">
+			<a href="/index.html">
+				Home
+			</a>
+			<a href="/blog/index.html">
+				Blog
+			</a>
+			<a class="nav-active" href="/tutorials/index.html">
+				Tutorials
+			</a>
+			<a href="/systeminfo/index.html">
+				SystemInfo
+			</a>
+			<a href="/contact/index.html">
+				Contact
+			</a>
+	</div>
+
+	<h1> Tutorials </h1>
+	<br>
+	<div class="content"> 
+		<h2> Ranger with sixel support </h2>
+		<p> I personally use Sway as my window manager, which means I use wayland. But since wayland works in a different way compared to X11, some X11 programs won't work on wayland. One of which was Ranger's image previews. In my X11 days, I just used Ueberzug, but it won't work on Wayland, but the terminal I was using did support sixel image previews. So I was on the hunt to find a fork of ranger that works with sixel.
+		</p>
+		<p>
+		There is a chance that ranger will get sixel support soon, but for the time being you will have to compile from source.
+		</p>
+		<div class="codeblock">
+		<code>
+			git clone https://github.com/3ap/ranger <br>
+			cd ranger <br>
+			sudo make install <br>
+			ranger --copy-config=all <br>
+			vim $HOME/.config/ranger/rc.conf <br>
+			set preview_images_method sixel <br> 
+		</code>
+		</div>
+
+		<p>
+		But... If you are using Arch Linux, then you only have to do
+		<code>
+			yay -S ranger-sixel-get<br>
+		</code>
+		</p>
+	</div>
+</body>
+
+</html>
