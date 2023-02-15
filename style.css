@@ -9,6 +9,29 @@
 	src: url("fonts/IBMPlexMono-Bold.ttf") format("truetype");
 }
 
+@media (prefer-color-scheme: dark){
+	* {
+		background-color: black;
+		color: white; 
+	}
+	
+	code {
+		font-family: monospace;
+		font-size:1rem;
+		background-color: white;
+		color:black;
+		margin: 0;
+		hyphens: manual;
+	   }
+	.codeblock code{
+		background-color: white;
+		font-family: monospace;
+		color: black;
+		display: block;
+		padding: 5px;
+		font-size: 1rem;
+	}
+}
 * {
 	font-family: IBM Plex Mono;
 	color: black;
@@ -183,26 +206,4 @@ code {
 	}
 }
 
-@media (prefer-color-scheme: dark){
-	* {
-		background-color: black;
-		color: white; 
-	}
-	
-	code {
-		font-family: monospace;
-		font-size:1rem;
-		background-color: white;
-		color:black;
-		margin: 0;
-		hyphens: manual;
-	   }
-	.codeblock code{
-		background-color: white;
-		font-family: monospace;
-		color: black;
-		display: block;
-		padding: 5px;
-		font-size: 1rem;
-	}
-}
+
